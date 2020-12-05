@@ -18,6 +18,7 @@ class Calculator {
     }
 
     append(number) {
+        console.log(this.current);
         if(this.current.includes('.') && number === '.')return
         this.current = this.currentTextField.innerText + number + "";
         this.updateDisplay()        
@@ -56,14 +57,15 @@ class Calculator {
         }
         this.previous = '';
         this.operation = undefined;
+        this.current = this.current + ''
         this.updateDisplay();
     }
 
 
 
     updateDisplay() {
-        this.previousTextField.innerText = this.previous;
-        this.currentTextField.innerText = this.current;
+        this.previousTextField.innerText = this.previous + "";
+        this.currentTextField.innerText = this.current + "";
         if(this.operation != undefined){
             this.previousTextField.innerText += " " + this.operation;
         }
