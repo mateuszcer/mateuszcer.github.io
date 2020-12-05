@@ -18,7 +18,6 @@ class Calculator {
     }
 
     append(number) {
-        console.log(this.current);
         if(this.current.includes('.') && number === '.')return
         this.current = this.currentTextField.innerText + number + "";
         this.updateDisplay()        
@@ -50,7 +49,13 @@ class Calculator {
                 this.current = (this.previous - 0) * (this.current - 0) 
                 break;
             case '÷':
-                this.current = (this.previous - 0) / (this.current - 0) 
+                if(this.current == '0'){
+                    alert(`Can't divide by 0`)
+                    this.current = '';
+                }else {
+                    this.current = (this.previous - 0) / (this.current - 0) 
+                }
+                
                 break;
             default:
                 return
