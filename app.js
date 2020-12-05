@@ -12,6 +12,11 @@ class Calculator {
         this.updateDisplay();
     }
 
+    delete() {
+        this.current = this.current.slice(0, -1).toString()
+        this.updateDisplay()
+    }
+
     append(number) {
         if(this.current.includes('.') && number === '.')return
         this.current = this.currentTextField.innerText + number + "";
@@ -94,4 +99,8 @@ operations.forEach(operation => {
 
 equals.addEventListener('click', () => {
     calculator.compute()
+})
+
+deleteBtn.addEventListener('click', () => {
+    calculator.delete()
 })
