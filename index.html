@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Model Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Virus Spreading Model Visualisation</h1>
+        <h3 id="counter" >Click on the simulation to infect</h3>
+        
+        <canvas id="canvas">
+        </canvas>
+        <div class="controls">
+            <button id="activator">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <div class="slidecontainer">
+                <input type="range" min="10" max="120" value="50" class="slider" id="myRange">
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

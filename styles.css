@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+}
+
+#canvas {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    margin-bottom: 5px;
+}
+
+.controls button {
+    margin: 0 5px;
+}
